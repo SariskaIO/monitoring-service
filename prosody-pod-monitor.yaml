@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: prosody-pod-monitor
+  namespace: production
+spec:
+  selector:
+    matchLabels:
+      k8s-app: prosody
+  namespaceSelector:
+    any: false
+    matchNames:
+      - production
+  podMetricsEndpoints:
+    - port: metrics

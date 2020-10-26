@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - prometheus-adapter-configMap.yaml
+  - prometheus-adapter-clusterRoleBinding.yaml
+  - prometheus-adapter-clusterRole.yaml
+  - grafana-dashboardSources.yaml
+  - grafana-dashboardDefinitions.yaml
+  - prometheus-adapter-clusterRoleAggregatedMetricsReader.yaml
+  - prometheus-adapter-clusterRoleBindingDelegator.yaml
+  - grafana-deployment.yaml
+  - grafana-serviceAccount.yaml
+  - grafana-service.yaml
+  - prometheus-adapter-clusterRoleServerResources.yaml
+  - grafana-dashboardDatasources.yaml
+  - prometheus-adapter-apiService.yaml
+  - haproxy-pod-monitor.yaml
+  - jvb-pod-monitor.yaml
+  - prometheus-adapter-roleBindingAuthReader.yaml
+  - prometheus-adapter-deployment.yaml
+  - prometheus-adapter-service.yaml
+  - prometheus-adapter-serviceAccount.yaml
+  - prometheus-clusterRole.yaml
+  - prometheus-clusterRoleBinding.yaml
+  - prometheus-prometheus.yaml
+  - prometheus-roleBindingConfig.yaml
+  - prometheus-roleBindingSpecificNamespaces.yaml
+  - prometheus-roleConfig.yaml
+  - prometheus-roleSpecificNamespaces.yaml
+  - prometheus-service.yaml
+  - prometheus-serviceAccount.yaml
+  - prosody-pod-monitor.yaml
