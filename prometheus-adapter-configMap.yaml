@@ -1,13 +1,10 @@
-# expose metrics collected by Prometheus to the metric server
-# from prometheous---> metric server ---> HPA
-# metrics can then be used by HorizontalPodAutoscalers (e.g. for autoscaling JVBs)
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: adapter-config
   namespace: monitoring
 data:
-  config.yaml: |-
+  config.yaml: |
     rules:
     - seriesQuery: 'container_network_transmit_bytes_total{interface="eth0"}'
       resources:
@@ -20,27 +17,31 @@ data:
       metricsQuery: 'sum(rate(<<.Series>>{<<.LabelMatchers>>}[3m])) by (<<.GroupBy>>)'
     resourceRules:
       cpu:
-        containerLabel: container
-        containerQuery: 'sum(irate(container_cpu_usage_seconds_total{<<.LabelMatchers>>,container!="POD",container!="",pod!=""}[5m])) by (<<.GroupBy>>)'
-        nodeQuery: 'sum(1 - irate(node_cpu_seconds_total{mode="idle"}[5m]) * on(namespace, pod) group_left(node) node_namespace_pod:kube_pod_info:{<<.LabelMatchers>>}) by (<<.GroupBy>>)'
-        resources:
-          overrides:
-            namespace:
-              resource: namespace
-            node:
-              resource: node
-            pod:
-              resource: pod
-      memory:
-        containerLabel: container
-        containerQuery: 'sum(container_memory_working_set_bytes{<<.LabelMatchers>>,container!="POD",container!="",pod!=""}) by (<<.GroupBy>>)'
-        nodeQuery: 'sum(node_memory_MemTotal_bytes{job="node-exporter",<<.LabelMatchers>>} - node_memory_MemAvailable_bytes{job="node-exporter",<<.LabelMatchers>>}) by (<<.GroupBy>>)'
+        containerQuery: sum(rate(container_cpu_usage_seconds_total{<<.LabelMatchers>>}[1m])) by (<<.GroupBy>>)
+        nodeQuery: sum(rate(container_cpu_usage_seconds_total{<<.LabelMatchers>>, id='/'}[1m])) by (<<.GroupBy>>)
         resources:
           overrides:
             instance:
               resource: node
             namespace:
               resource: namespace
-            pod":
+            pod_name:
               resource: pod
-      window: 5m
+        containerLabel: container_name
+      memory:
+        containerQuery: sum(container_memory_working_set_bytes{<<.LabelMatchers>>}) by (<<.GroupBy>>)
+        nodeQuery: sum(container_memory_working_set_bytes{<<.LabelMatchers>>,id='/'}) by (<<.GroupBy>>)
+        resources:
+          overrides:
+            instance:
+              resource: node
+            namespace:
+              resource: namespace
+            pod_name:
+              resource: pod
+        containerLabel: container_name
+      window: 1m
+    externalRules:
+    - seriesQuery: '{__name__=~".*"}'
+      name:
+        matches: "(.*)"

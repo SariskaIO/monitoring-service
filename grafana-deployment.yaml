@@ -48,6 +48,8 @@ spec:
         - name: grafana-dashboard-jitsi
           mountPath: /grafana-dashboard-definitions/0/jitsi
           readOnly: false
+      nodeSelector:
+        beta.kubernetes.io/os: linux
       securityContext:
         fsGroup: 65534
         runAsNonRoot: true
