@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      k8s-app: prosody
+      app: prosody
   namespaceSelector:
     any: false
     matchNames:

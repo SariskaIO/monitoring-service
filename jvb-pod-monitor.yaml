@@ -6,10 +6,6 @@ metadata:
 spec:
   selector:
     matchLabels:
-      k8s-app: jvb
-  namespaceSelector:
-    any: false
-    matchNames:
-      - public
+      app: jvb
   podMetricsEndpoints:
     - port: metrics

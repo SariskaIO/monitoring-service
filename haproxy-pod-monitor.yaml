@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      k8s-app: haproxy
+      app: haproxy
   namespaceSelector:
     any: false
     matchNames:

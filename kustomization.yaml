@@ -13,7 +13,6 @@ resources:
   - kube-state-metrics-deployment.yaml
   - kube-state-metrics-service.yaml
   - kube-state-metrics-serviceAccount.yaml
-  - kube-state-metrics-serviceMonitor.yaml
   - prometheus-adapter-apiService.yaml
   - prometheus-adapter-clusterRole.yaml
   - prometheus-adapter-clusterRoleAggregatedMetricsReader.yaml
@@ -47,3 +46,4 @@ resources:
   - setup/prometheus-operator-deployment.yaml
   - setup/prometheus-operator-service.yaml
   - setup/prometheus-operator-serviceAccount.yaml
+  - haproxy-serviceMonitor.yaml

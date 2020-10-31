@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: haproxy
+  name: haproxy
+  namespace: production
+spec:
+  endpoints:
+    - interval: 30s
+      port: haproxy
+  selector:
+    matchLabels:
+      prometheus: k8s
