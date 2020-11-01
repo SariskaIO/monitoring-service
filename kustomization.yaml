@@ -46,4 +46,7 @@ resources:
   - setup/prometheus-operator-deployment.yaml
   - setup/prometheus-operator-service.yaml
   - setup/prometheus-operator-serviceAccount.yaml
-  - haproxy-serviceMonitor.yaml
+  - haproxy-pod-monitor.yaml
+  - prosody-pod-monitor.yaml
+  - jvb-pod-monitor.yaml
+
