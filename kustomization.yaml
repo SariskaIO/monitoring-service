@@ -8,11 +8,11 @@ resources:
   - grafana-deployment.yaml
   - grafana-service.yaml
   - grafana-serviceAccount.yaml
-  - kube-state-metrics-clusterRole.yaml
-  - kube-state-metrics-clusterRoleBinding.yaml
-  - kube-state-metrics-deployment.yaml
-  - kube-state-metrics-service.yaml
-  - kube-state-metrics-serviceAccount.yaml
+#  - kube-state-metrics-clusterRole.yaml
+#  - kube-state-metrics-clusterRoleBinding.yaml
+#  - kube-state-metrics-deployment.yaml
+#  - kube-state-metrics-service.yaml
+#  - kube-state-metrics-serviceAccount.yaml
   - prometheus-adapter-apiService.yaml
   - prometheus-adapter-clusterRole.yaml
   - prometheus-adapter-clusterRoleAggregatedMetricsReader.yaml
