@@ -1,15 +1,15 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PodMonitor
 metadata:
-  name: jvb-pod-monitor
+  name: pricing-service-pod-monitor
   namespace: production
 spec:
   selector:
     matchLabels:
-      app: jvb
+      app: pricing-service
   namespaceSelector:
     any: false
     matchNames:
       - production     
   podMetricsEndpoints:
-    - port: metrics
+    - port: 9002
