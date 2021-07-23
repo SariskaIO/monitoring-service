@@ -43,7 +43,7 @@ spec:
           name: config
           readOnly: false
       nodeSelector:
-        kubernetes.io/os: linux
+        alpha.eksctl.io/nodegroup-name: "managed-ng-private"
       serviceAccountName: prometheus-adapter
       volumes:
       - emptyDir: {}
