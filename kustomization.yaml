@@ -13,6 +13,13 @@ resources:
 #  - kube-state-metrics-deployment.yaml
 #  - kube-state-metrics-service.yaml
 #  - kube-state-metrics-serviceAccount.yaml
+  - node-exporter-clusterRole.yaml
+  - node-exporter-clusterRoleBinding.yaml
+  - node-exporter-daemonset.yaml
+  - node-exporter-prometheusRule.yaml
+  - node-exporter-service.yaml
+  - node-exporter-serviceAccount.yaml
+  - node-exporter-serviceMonitor.yaml
   - prometheus-adapter-apiService.yaml
   - prometheus-adapter-clusterRole.yaml
   - prometheus-adapter-clusterRoleAggregatedMetricsReader.yaml
