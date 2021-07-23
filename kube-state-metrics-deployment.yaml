@@ -17,6 +17,8 @@ spec:
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/version: v1.9.7
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-private"
       containers:
       - args:
         - --host=127.0.0.1
