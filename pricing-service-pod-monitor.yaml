@@ -4,7 +4,7 @@ metadata:
   name: pricing-service-pod-monitor
   namespace: production
 spec:
-  selector:
+  selector:9002
     matchLabels:
       app: pricing-service
   namespaceSelector:
