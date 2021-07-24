@@ -22,6 +22,8 @@ spec:
         app.kubernetes.io/part-of: kube-prometheus
         app.kubernetes.io/version: 1.2.0
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-private"
       containers:
       - args:
         - --web.listen-address=127.0.0.1:9100
@@ -79,8 +81,6 @@ spec:
           runAsUser: 65532
       hostNetwork: true
       hostPID: true
-      nodeSelector:
-        kubernetes.io/os: linux
       securityContext:
         runAsNonRoot: true
         runAsUser: 65534
