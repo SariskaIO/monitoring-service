@@ -8,11 +8,11 @@ resources:
   - grafana-deployment.yaml
   - grafana-service.yaml
   - grafana-serviceAccount.yaml
-#  - kube-state-metrics-clusterRole.yaml
-#  - kube-state-metrics-clusterRoleBinding.yaml
-#  - kube-state-metrics-deployment.yaml
-#  - kube-state-metrics-service.yaml
-#  - kube-state-metrics-serviceAccount.yaml
+  - kube-state-metrics-clusterRole.yaml
+  - kube-state-metrics-clusterRoleBinding.yaml
+  - kube-state-metrics-deployment.yaml
+  - kube-state-metrics-service.yaml
+  - kube-state-metrics-serviceAccount.yaml
   - node-exporter-clusterRole.yaml
   - node-exporter-clusterRoleBinding.yaml
   - node-exporter-daemonset.yaml
@@ -57,4 +57,4 @@ resources:
   - prosody-pod-monitor.yaml
   - jvb-pod-monitor.yaml
   - pricing-service-pod-monitor.yaml
-
+  - kube-state-pod-monitor.yaml

@@ -6,6 +6,15 @@ metadata:
 data:
   config.yaml: |
     rules:
+    - seriesQuery: 'jibri_live_count'
+      resources:
+        overrides:
+          namespace: {resource: "namespace"}
+          pod: {resource: "pod"}
+      name:
+        matches: "^(.*)_count"
+        as: "jibri_live_count_avg"
+      metricsQuery: '<<.Series>>{<<.LabelMatchers>>}'
     - seriesQuery: 'container_network_transmit_bytes_total{interface="eth0"}'
       resources:
         overrides:
