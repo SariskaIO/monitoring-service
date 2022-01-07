@@ -65,3 +65,4 @@ resources:
   - alertmanager-service.yaml
   - alertmanager-serviceAccount.yaml
   - alertmanager-serviceMonitor.yaml
+  - grafana-pvc.yaml
