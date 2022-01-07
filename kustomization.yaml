@@ -67,3 +67,4 @@ resources:
   - alertmanager-serviceAccount.yaml
   - alertmanager-serviceMonitor.yaml
   - grafana-pvc.yaml
+  - grafana-grafanainiConfig.yaml

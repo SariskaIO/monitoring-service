@@ -15,7 +15,7 @@ data:
             },
             {
                 "folder": "Default",
-                "name": "0",
+                "name": "1",
                 "options": {
                     "path": "/grafana-dashboard-definitions/1"
                 },

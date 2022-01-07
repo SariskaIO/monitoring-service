@@ -45,7 +45,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "Busy state of all CPU cores together",
           "fieldConfig": {
             "defaults": {
@@ -127,7 +127,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "Non available RAM memory",
           "fieldConfig": {
             "defaults": {
@@ -213,7 +213,7 @@ data:
           "type": "gauge"
         },
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -284,7 +284,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The total incoming bitrate for the video bridge in kilobits per second.",
           "fieldConfig": {
             "defaults": {
@@ -357,7 +357,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The total outgoing bitrate for the video bridge in kilobits per second.",
           "fieldConfig": {
             "defaults": {
@@ -430,7 +430,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The number of Java threads that the video bridge is using.",
           "fieldConfig": {
             "defaults": {
@@ -503,7 +503,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "An estimation of the number of current video streams forwarded by the bridge.",
           "fieldConfig": {
             "defaults": {
@@ -576,7 +576,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "An average value (in milliseconds) of the RTT across all streams.",
           "fieldConfig": {
             "defaults": {
@@ -649,7 +649,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The sum of the lengths of all completed conferences, in seconds.",
           "fieldConfig": {
             "defaults": {
@@ -722,7 +722,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The number of participants in the largest conference currently hosted on the bridge.",
           "fieldConfig": {
             "defaults": {
@@ -795,7 +795,7 @@ data:
         },
         {
           "cacheTimeout": null,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The total number of conferences created on the bridge.",
           "fieldConfig": {
             "defaults": {
@@ -871,7 +871,7 @@ data:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "decimals": null,
           "description": "The current number of conferences.",
           "fieldConfig": {
@@ -976,7 +976,7 @@ data:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "decimals": null,
           "description": "The current number of participants.",
           "fieldConfig": {
@@ -1086,7 +1086,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The total incoming/outgoing bitrate for the video bridge in kilobits per second.",
               "fill": 1,
               "fillGradient": 0,
@@ -1189,7 +1189,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": " The total incoming/outgoing packet rate for the video bridge in packets per second.",
               "fill": 1,
               "fillGradient": 0,
@@ -1292,7 +1292,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The fraction of lost incoming RTP packets. This is based on RTP sequence numbers and is relatively accurate.\nThe fraction of lost outgoing RTP packets. This is based on incoming RTCP Receiver Reports, and an attempt to subtract the fraction of packets that were not sent (i.e. were lost before they reached the bridge). Further, this is averaged over all streams of all users as opposed to all packets, so it is not correctly weighted. This is not accurate, but may be a useful metric nonetheless.",
               "fill": 1,
               "fillGradient": 0,
@@ -1395,7 +1395,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "Experimental. An average value (in milliseconds) of the jitter calculated for incoming and outgoing streams. This hasn't been tested and it is currently not known whether the values are correct or not.",
               "fill": 1,
               "fillGradient": 0,
@@ -1485,7 +1485,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "An average value (in milliseconds) of the RTT across all streams.",
               "fill": 1,
               "fillGradient": 0,
@@ -1575,7 +1575,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The current number of audio/video channels.",
               "fill": 1,
               "fillGradient": 0,
@@ -1671,7 +1671,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The rate of participant-seconds that are loss-controlled.",
               "fill": 1,
               "fillGradient": 0,
@@ -1761,7 +1761,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The rate of participant-seconds that are loss-limited.",
               "fill": 1,
               "fillGradient": 0,
@@ -1851,7 +1851,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The rate of participant-seconds that are loss-degraded.",
               "fill": 1,
               "fillGradient": 0,
@@ -1941,7 +1941,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The rate of failed conferences on the bridge. A conference is marked as failed when all of its channels have failed. A channel is marked as failed if it had no payload activity.",
               "fill": 1,
               "fillGradient": 0,
@@ -2031,7 +2031,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The rate of partially failed conferences on the bridge. A conference is marked as partially failed when some of its channels has failed. A channel is marked as failed if it had no payload activity.",
               "fill": 1,
               "fillGradient": 0,
@@ -2121,7 +2121,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The total number messages sent/received through data channels.",
               "fill": 1,
               "fillGradient": 0,
@@ -2222,7 +2222,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "The total number messages sent/received through COLIBRI web sockets.",
               "fill": 1,
               "fillGradient": 0,
@@ -2323,7 +2323,7 @@ data:
               "bars": false,
               "dashLength": 10,
               "dashes": false,
-              "datasource": "${DS_PROMETHEUS}",
+              "datasource": "prometheus",
               "description": "Stress Level reported to Jicofo by the videobridge.",
               "fieldConfig": {
                 "defaults": {
@@ -2437,7 +2437,7 @@ data:
           {
             "allValue": null,
             "current": {},
-            "datasource": "${DS_PROMETHEUS}",
+            "datasource": "prometheus",
             "definition": "label_values(jitsi_conferences, instance)",
             "error": null,
             "hide": 0,
