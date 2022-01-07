@@ -50,6 +50,9 @@ spec:
         - name: grafana-dashboard-jitsi
           mountPath: /grafana-dashboard-definitions/0/jitsi
           readOnly: false
+        - name: grafana-system-dashboard-jitsi
+          mountPath: /grafana-dashboard-definitions/1/jitsi
+          readOnly: false   
       securityContext:
         fsGroup: 65534
         runAsNonRoot: true
@@ -67,3 +70,6 @@ spec:
       - configMap:
           name: grafana-dashboards
         name: grafana-dashboards
+      - configMap:
+          name: grafana-system-dashboard-jitsi
+        name: grafana-system-dashboard-jitsi

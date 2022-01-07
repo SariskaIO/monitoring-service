@@ -4,22 +4,23 @@ kind: Kustomization
 resources:
   - grafana-dashboardDatasources.yaml
   - grafana-dashboardDefinitions.yaml
+  - grafana-system-dashboardDefinitions.yaml
   - grafana-dashboardSources.yaml
   - grafana-deployment.yaml
   - grafana-service.yaml
   - grafana-serviceAccount.yaml
-#  - kube-state-metrics-clusterRole.yaml
-#  - kube-state-metrics-clusterRoleBinding.yaml
-#  - kube-state-metrics-deployment.yaml
-#  - kube-state-metrics-service.yaml
-#  - kube-state-metrics-serviceAccount.yaml
-  # - node-exporter-clusterRole.yaml
-  # - node-exporter-clusterRoleBinding.yaml
-  # - node-exporter-daemonset.yaml
-  # - node-exporter-prometheusRule.yaml
-  # - node-exporter-service.yaml
-  # - node-exporter-serviceAccount.yaml
-  # - node-exporter-serviceMonitor.yaml
+  - kube-state-metrics-clusterRole.yaml
+  - kube-state-metrics-clusterRoleBinding.yaml
+  - kube-state-metrics-deployment.yaml
+  - kube-state-metrics-service.yaml
+  - kube-state-metrics-serviceAccount.yaml
+  - node-exporter-clusterRole.yaml
+  - node-exporter-clusterRoleBinding.yaml
+  - node-exporter-daemonset.yaml
+  - node-exporter-prometheusRule.yaml
+  - node-exporter-service.yaml
+  - node-exporter-serviceAccount.yaml
+  - node-exporter-serviceMonitor.yaml
   - prometheus-adapter-apiService.yaml
   - prometheus-adapter-clusterRole.yaml
   - prometheus-adapter-clusterRoleAggregatedMetricsReader.yaml
@@ -57,4 +58,10 @@ resources:
   - prosody-pod-monitor.yaml
   - jvb-pod-monitor.yaml
   - pricing-service-pod-monitor.yaml
-
+  - alertmanager-alertmanager.yaml
+  - alertmanager-podDisruptionBudget.yaml
+  - alertmanager-prometheusRule.yaml
+  - alertmanager-secret.yaml
+  - alertmanager-service.yaml
+  - alertmanager-serviceAccount.yaml
+  - alertmanager-serviceMonitor.yaml

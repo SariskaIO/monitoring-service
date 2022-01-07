@@ -12,6 +12,15 @@ data:
                 },
                 "orgId": 1,
                 "type": "file"
+            },
+            {
+                "folder": "Default",
+                "name": "0",
+                "options": {
+                    "path": "/grafana-dashboard-definitions/1"
+                },
+                "orgId": 1,
+                "type": "file"
             }
         ]
     }
