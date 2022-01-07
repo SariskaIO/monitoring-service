@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: jicofo-pod-monitor
+  namespace: production
+spec:
+  selector:
+    matchLabels:
+      app: jicofo
+  namespaceSelector:
+    any: false
+    matchNames:
+      - production     
+  podMetricsEndpoints:
+    - port: metrics
