@@ -57,6 +57,7 @@ resources:
   - haproxy-pod-monitor.yaml
   - prosody-pod-monitor.yaml
   - jvb-pod-monitor.yaml
+  - jicofo-pod-monitor.yaml
   - pricing-service-pod-monitor.yaml
   - alertmanager-alertmanager.yaml
   - alertmanager-podDisruptionBudget.yaml
