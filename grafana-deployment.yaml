@@ -60,8 +60,8 @@ spec:
       serviceAccountName: grafana
       volumes:
       - name: grafana-pv
-          persistentVolumeClaim:
-            claimName: grafana-pvc
+        persistentVolumeClaim:
+          claimName: grafana-pvc
       - name: grafana-datasources
         secret:
           secretName: grafana-datasources
