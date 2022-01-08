@@ -457,12 +457,12 @@ data:
     [smtp]
     enabled = true
     host = smtp.gmail.com:587
-    user = brajendra@sariska.io
-    password = >R9Z%r5Rr
+    user = admin@sariska.io
+    password = admin@sariska
     ;cert_file =
     ;key_file =
     ;skip_verify = false
-    from_address = brajendra@sariska.io
+    from_address = admin@sariska.io
     from_name = Sariska
     ;ehlo_identity = dashboard.example.com 3
 
