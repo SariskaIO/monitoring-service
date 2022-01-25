@@ -6,12 +6,13 @@ metadata:
   name: k8s
   namespace: monitoring
 spec:
-  image: quay.io/prometheus/prometheus:v2.20.0
+  image: quay.io/prometheus/prometheus:v2.32.1
   podMonitorNamespaceSelector: {}
   podMonitorSelector: {}
   probeNamespaceSelector: {}
   probeSelector: {}
   replicas: 1
+  logLevel: info
   resources:
     requests:
       memory: 200Mi
@@ -22,7 +23,7 @@ spec:
   serviceAccountName: prometheus-k8s
   serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector: {}
-  version: v2.20.0
+  version: v2.32.1
   storage:
     volumeClaimTemplate:
       spec:
