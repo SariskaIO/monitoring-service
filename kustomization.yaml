@@ -5,6 +5,7 @@ resources:
   - grafana-dashboardDatasources.yaml
   - grafana-dashboardDefinitions.yaml
   - grafana-system-dashboardDefinitions.yaml
+  - grafana-jmeter-dashboardDefinitions.yaml
   - grafana-dashboardSources.yaml
   - grafana-deployment.yaml
   - grafana-service.yaml
