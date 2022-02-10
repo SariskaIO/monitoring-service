@@ -30,6 +30,15 @@ data:
                 },
                 "orgId": 1,
                 "type": "file"
+            },
+            {
+                "folder": "Default",
+                "name": "3",
+                "options": {
+                    "path": "/grafana-dashboard-definitions/3"
+                },
+                "orgId": 1,
+                "type": "file"
             }
         ]
     }

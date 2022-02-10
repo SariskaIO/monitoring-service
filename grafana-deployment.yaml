@@ -57,7 +57,10 @@ spec:
           readOnly: false
         - name: grafana-jmeter-dashboard-jitsi
           mountPath: /grafana-dashboard-definitions/2/jitsi
-          readOnly: false       
+          readOnly: false
+        - name: haproxy-dashboard-jitsi
+          mountPath: /grafana-dashboard-definitions/3/jitsi
+          readOnly: false              
       securityContext:
         fsGroup: 65534
         runAsNonRoot: true
@@ -88,3 +91,6 @@ spec:
       - configMap:
           name: grafana-jmeter-dashboard-jitsi
         name: grafana-jmeter-dashboard-jitsi
+      - configMap:
+          name: haproxy-dashboard-jitsi
+        name: haproxy-dashboard-jitsi   

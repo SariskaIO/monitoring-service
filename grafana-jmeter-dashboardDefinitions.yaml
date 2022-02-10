@@ -1576,7 +1576,7 @@ data:
         ]
       },
       "timezone": "browser",
-      "title": "JMeter Metric Template",
+      "title": "JMeter Metric",
       "uid": "ltaas",
       "version": 1
     }

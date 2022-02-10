@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - grafana-dashboardDatasources.yaml
   - grafana-dashboardDefinitions.yaml
+  - haproxy-dashboardDefinition.yaml
   - grafana-system-dashboardDefinitions.yaml
   - grafana-jmeter-dashboardDefinitions.yaml
   - grafana-dashboardSources.yaml
