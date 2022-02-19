@@ -18,7 +18,7 @@ spec:
         app: grafana
     spec:
       nodeSelector:
-        alpha.eksctl.io/nodegroup-name: "managed-ng-private"
+         alpha.eksctl.io/nodegroup-name: "managed-ng-monitoring"
       containers:
       - env: []
         image: grafana/grafana:7.1.0
@@ -60,7 +60,10 @@ spec:
           readOnly: false
         - name: haproxy-dashboard-jitsi
           mountPath: /grafana-dashboard-definitions/3/jitsi
-          readOnly: false              
+          readOnly: false      
+        - name: grafana-node-exporter-dashboard
+          mountPath:  /grafana-dashboard-definitions/4/jitsi
+          readOnly: false                 
       securityContext:
         fsGroup: 65534
         runAsNonRoot: true
@@ -94,3 +97,6 @@ spec:
       - configMap:
           name: haproxy-dashboard-jitsi
         name: haproxy-dashboard-jitsi   
+      - configMap:
+          name: grafana-node-exporter-dashboard
+        name: grafana-node-exporter-dashboard 

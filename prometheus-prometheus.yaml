@@ -31,3 +31,5 @@ spec:
         resources:
           requests:
             storage: 5Gi
+  nodeSelector:
+    alpha.eksctl.io/nodegroup-name: "managed-ng-monitoring"

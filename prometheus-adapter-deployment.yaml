@@ -43,7 +43,7 @@ spec:
           name: config
           readOnly: false
       nodeSelector:
-        alpha.eksctl.io/nodegroup-name: "managed-ng-private"
+        alpha.eksctl.io/nodegroup-name: "managed-ng-monitoring"
       serviceAccountName: prometheus-adapter
       volumes:
       - emptyDir: {}

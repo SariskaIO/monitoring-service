@@ -54,6 +54,7 @@ spec:
           runAsUser: 65534
       nodeSelector:
         beta.kubernetes.io/os: linux
+        alpha.eksctl.io/nodegroup-name: "managed-ng-monitoring"
       securityContext:
         runAsNonRoot: true
         runAsUser: 65534

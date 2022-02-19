@@ -4,9 +4,10 @@ kind: Kustomization
 resources:
   - grafana-dashboardDatasources.yaml
   - grafana-dashboardDefinitions.yaml
-  - haproxy-dashboardDefinition.yaml
+  #- haproxy-dashboardDefinition.yaml
   - grafana-system-dashboardDefinitions.yaml
   - grafana-jmeter-dashboardDefinitions.yaml
+  #- grafana-nodeExporterDefinitions.yaml
   - grafana-dashboardSources.yaml
   - grafana-deployment.yaml
   - grafana-service.yaml
@@ -16,13 +17,13 @@ resources:
   - kube-state-metrics-deployment.yaml
   - kube-state-metrics-service.yaml
   - kube-state-metrics-serviceAccount.yaml
-  - node-exporter-clusterRole.yaml
-  - node-exporter-clusterRoleBinding.yaml
-  - node-exporter-daemonset.yaml
-  - node-exporter-prometheusRule.yaml
-  - node-exporter-service.yaml
-  - node-exporter-serviceAccount.yaml
-  - node-exporter-serviceMonitor.yaml
+  - nodeExporter-clusterRole.yaml
+  - nodeExporter-clusterRoleBinding.yaml
+  - nodeExporter-daemonset.yaml
+  - nodeExporter-service.yaml
+  - nodeExporter-prometheusRule.yaml
+  - nodeExporter-serviceAccount.yaml
+  - nodeExporter-serviceMonitor.yaml
   - prometheus-adapter-apiService.yaml
   - prometheus-adapter-clusterRole.yaml
   - prometheus-adapter-clusterRoleAggregatedMetricsReader.yaml
@@ -77,3 +78,5 @@ resources:
   - blackboxExporter-service.yaml
   - blackboxExporter-serviceAccount.yaml
   - blackboxExporter-serviceMonitor.yaml
+
+      
