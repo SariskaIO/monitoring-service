@@ -70,3 +70,10 @@ resources:
   - alertmanager-serviceMonitor.yaml
   - grafana-pvc.yaml
   - grafana-grafanainiConfig.yaml
+  - blackboxExporter-clusterRole.yaml
+  - blackboxExporter-clusterRoleBinding.yaml
+  - blackboxExporter-configuration.yaml
+  - blackboxExporter-deployment.yaml
+  - blackboxExporter-service.yaml
+  - blackboxExporter-serviceAccount.yaml
+  - blackboxExporter-serviceMonitor.yaml
