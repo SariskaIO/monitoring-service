@@ -126,4 +126,9 @@ If you have any questions or feedback regarding kube-prometheus, join the [kube-
 
 ## License
 
+Alert Manager
+
+$ kubectl --namespace monitoring port-forward svc/alertmanager-main 9093
+
+
 Apache License 2.0, see [LICENSE](https://github.com/prometheus-operator/kube-prometheus/blob/main/LICENSE).
