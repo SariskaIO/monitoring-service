@@ -130,5 +130,9 @@ Alert Manager
 
 $ kubectl --namespace monitoring port-forward svc/alertmanager-main 9093
 
+## Update prometheus rules
+delete prometheus-operator pods  
+
+
 
 Apache License 2.0, see [LICENSE](https://github.com/prometheus-operator/kube-prometheus/blob/main/LICENSE).
